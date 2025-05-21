@@ -1,0 +1,37 @@
+1. Migrate GitHub to GitLab Using Command Line (Git CLI)
+Step-by-step:
+Step 1: Clone the GitHub repo
+bash
+Copy
+
+git clone --mirror https://github.com/your-username/your-repo.git
+cd your-repo.git
+--mirror clones all refs, branches, and tags (a complete copy of the repo, ideal for migration).
+
+Step 2: Create a new empty repository in GitLab
+Go to GitLab.
+
+Create a new project (without initializing with README).
+
+
+
+https://gitlab.com/your-group/your-repo.git
+Step 3: Push to GitLab
+bash
+Copy
+Edit
+git remote set-url origin https://gitlab.com/your-group/your-repo.git
+git push --mirror
+This pushes everything (branches, tags, commits) to GitLab.
+
+
+
+Need to clone github which i want to migrate :
+ git clone --mirror https://github.com/chandra635313/hello-world-1.git
+    3  ls
+   need to switch that cloned repo 4  cd hello-world-1.git/
+    5  Need to create one new project in gitlab and need to run below remote command in cloned repo means In (hellowarld repo)
+    6  git remote set-url origin https://gitlab.com/chandudevops1657-group/practice1.git
+    after ran above command need to run below command to push all the tags and branches and comits to gitlab  
+    7  git push --mirror
+
